@@ -1,0 +1,11 @@
+# AWS credentials
+access-key-id: ""
+secret-access-key: ""
+
+dbs:
+  - path: /data/db/production.db
+    replicas:
+      - url: s3://bucket
+        sync-interval: 30s
+        retention: 72h
+        snapshot-interval: 24h

@@ -1,0 +1,8 @@
+FROM litestream/litestream:latest
+
+CMD ["/bin/sh"]
+COPY /usr/local/bin/litestream /usr/local/bin/litestream # buildkit
+
+ENTRYPOINT ["/usr/local/bin/litestream"]
+
+CMD ['litestream', 'replicate /db/path.db s3://bucketpath']

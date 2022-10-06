@@ -1,0 +1,5 @@
+FROM litestream/litestream:latest
+
+# ENTRYPOINT ["/usr/local/bin/litestream"]
+
+CMD ['litestream', 'replicate /db/path.db s3://bucketpath']
